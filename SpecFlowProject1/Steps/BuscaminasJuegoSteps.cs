@@ -1,63 +1,54 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.CommonModels;
+using OpenQA.Selenium.Support.UI;
 
 namespace SpecFlowProject1.Steps
 {
     [Binding]
     public class BuscaminasJuegoSteps
     {
-        //Implementacion del webdriver para firefox
-        IWebDriver driver = new FirefoxDriver();
+        //Creamos una varible de tipo IWebDriver
+        IWebDriver driver;
 
 
         [Given(@"que ingreso al sitio web")]
         public void DadoQueIngresoAlSitioWeb()
         {
 
-            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"C:\Selenium", "geckodriver.exe");
-            service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-            driver = new FirefoxDriver(service);
+            //Instanciamos el objeto driver
+            driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("http://localhost:4200/minas");
 
-            //App route
-            driver.Url = "https://localhost:8081/";
-            //Ampliamos la venta del navegador
-            driver.Manage().Window.Maximize();
-            driver.Navigate();
         }
-        
+
         [When(@"escribo mi nombre de usuario ""(.*)""")]
         public void CuandoRegistroMi(string nombre)
         {
-            driver.Url = "https://localhost:8081/login/index";
-            //Ampliamos la venta del navegador
+            //Ampliamos toda la ventana
             driver.Manage().Window.Maximize();
-            driver.Navigate();
-            driver.FindElement(By.Name("username")).SendKeys(nombre);
-            driver.FindElement(By.Name("username")).SendKeys(nombre + Keys.Enter);
-            //driver.FindElement(By.Name("aceptar")).Click();
+            //Espera de 5 segs
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            //Enviamos el parametro nombre
+            driver.FindElement(By.Name("txtNombre")).SendKeys(nombre + Keys.Enter);
+            //Enviamos al usuario a la pagina de juego
+            driver.Navigate().GoToUrl("http://localhost:4200/juego");
+
         }
-        
+
         [Then(@"el juego empieza")]
         public void EntoncesElJuegoEmpieza()
         {
-            var dato = driver.FindElement(By.Name("empezar")).GetAttribute("username");
-            var esperado = driver.FindElement(By.Name("empezar")).GetAttribute("username").Equals("Pepito");
 
-            //Assert.AreEqual(dato, esperado);
-            bool result = dato.Equals(esperado);
-
-            if (result){
+            if (driver != null)
+            {
                 Console.Out.Write("Test aprobado");
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
                 driver.Close();
             }
-            else {
-                Console.Out.Write("El test ha fallado");
-                driver.Close();
-            }
+
         }
     }
 }
