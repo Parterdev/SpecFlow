@@ -8,7 +8,7 @@ Característica: Inicio de sesion
 Escenario: Inicio de sesión Facebook
 	Dado que ingreso al sitio web de Facebook
 	Y pongo los siguientes detalles
-		| username                   | password      |
-		| email@any.com              | yourspassword |  	
+		| username    | password     |
+		| youremail   | yourpassword |  	
 	Y le doy click en el botón Entrar
 	Entonces podré ver datos de mi perfil

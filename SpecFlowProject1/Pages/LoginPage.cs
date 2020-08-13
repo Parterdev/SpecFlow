@@ -20,7 +20,7 @@ namespace SpecFlowProject1.Pages
         //Btn login
         public IWebElement buttonLogin => WebDriver.FindElement(By.Name("login"));
         //Nombre del perfil
-        public IWebElement ProfileNameText => WebDriver.FindElement(By.LinkText("ProfileName"));
+        public IWebElement ProfileNameText => WebDriver.FindElement(By.LinkText("profileName"));
 
 
         //Metodo para login username and password
