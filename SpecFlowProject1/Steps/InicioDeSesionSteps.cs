@@ -45,7 +45,7 @@ namespace SpecFlowProject1.Steps
             loginPage.LoginClickButton();
         }
         
-        [Then(@"podré ver datos de mi perfil")]
+        [Then(@"podré ver mi nombre de perfil")]
         public void EntoncesPodreVerDatosDeMiPerfil()
         {
             webDriver.Navigate().GoToUrl("profileFacebookUrl");

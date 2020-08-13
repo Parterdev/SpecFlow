@@ -11,4 +11,4 @@ Escenario: Inicio de sesión Facebook
 		| username    | password     |
 		| youremail   | yourpassword |  	
 	Y le doy click en el botón Entrar
-	Entonces podré ver datos de mi perfil
+	Entonces podré ver mi nombre de perfil
