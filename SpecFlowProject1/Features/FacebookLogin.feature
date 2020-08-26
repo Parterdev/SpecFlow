@@ -5,10 +5,12 @@ Característica: Inicio de sesion
 	Para visualizar mi perfil de usuario
 
 @smoke
-Escenario: Inicio de sesión Facebook
+Esquema del escenario: Inicio de sesión Facebook
 	Dado que ingreso al sitio web de Facebook
 	Y pongo los siguientes detalles
-		| username    | password     |
-		| youremail   | yourpassword |  	
+		| username                   | password               |
+		| litemeilateran@outlook.com | Programacionlineal1998 |  	
 	Y le doy click en el botón Entrar
 	Entonces podré ver mi nombre de perfil
+
+

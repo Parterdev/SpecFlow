@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowProject1", "SpecFlo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaUnitariaBuscaminas", "PruebaUnitariaBuscaminas\PruebaUnitariaBuscaminas.csproj", "{5C8DD94B-FACA-4503-9692-89E9A00C5018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matematica.Tests", "Matematica.Tests\Matematica.Tests.csproj", "{21C355B0-EE4C-4D0F-8D69-CBFEB0E39FED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTest", "DataTest\DataTest.csproj", "{83AC8FBB-12F9-4F2D-878E-AD697A220938}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{5C8DD94B-FACA-4503-9692-89E9A00C5018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8DD94B-FACA-4503-9692-89E9A00C5018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8DD94B-FACA-4503-9692-89E9A00C5018}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21C355B0-EE4C-4D0F-8D69-CBFEB0E39FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21C355B0-EE4C-4D0F-8D69-CBFEB0E39FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21C355B0-EE4C-4D0F-8D69-CBFEB0E39FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21C355B0-EE4C-4D0F-8D69-CBFEB0E39FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83AC8FBB-12F9-4F2D-878E-AD697A220938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83AC8FBB-12F9-4F2D-878E-AD697A220938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83AC8FBB-12F9-4F2D-878E-AD697A220938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83AC8FBB-12F9-4F2D-878E-AD697A220938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
