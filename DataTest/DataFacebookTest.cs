@@ -46,7 +46,7 @@ namespace DataTest
                 //Submit
                 driver.FindElement(By.Name("login")).Submit();
                 //Go to profile
-                driver.Navigate().GoToUrl("https://www.facebook.com/Parter28");
+                driver.Navigate().GoToUrl("UserProfile");
                 //Read data
                
                 //Assert.AreEqual(esperado, dado);

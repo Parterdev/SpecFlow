@@ -8,8 +8,8 @@ Característica: Inicio de sesion
 Esquema del escenario: Inicio de sesión Facebook
 	Dado que ingreso al sitio web de Facebook
 	Y pongo los siguientes detalles
-		| username                   | password               |
-		| litemeilateran@outlook.com | Programacionlineal1998 |  	
+		| username  | password     |
+		| userEmail | userPassword |  	
 	Y le doy click en el botón Entrar
 	Entonces podré ver mi nombre de perfil
 
